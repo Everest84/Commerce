@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Commerce</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="has-navbar-fixed-top">
+    <main>
+        <header>
+            <nav class="navbar is-fixed-top has-shadow">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="@Url.Action("Index", "Home")">
+                        <img src="https://via.placeholder.com/42x28" alt="Commerce" width="42" height="28" />
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="@Url.Action("About", "Home")">
+                            About
+                        </a>
+                        <a class="navbar-item" href="@Url.Action("Contact", "Home")">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="navbar-end">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <article>
+            <div class="container">
+                @RenderBody()
+            </div>
+        </article>
+        <footer class="footer has-background-light">
+            <div class="content">
+                <p class="has-text-centered">&copy; @DateTime.Now.Year - Commerce</p>
+            </div>
+        </footer>
+    </main>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bulma")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

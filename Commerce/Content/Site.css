@@ -1,0 +1,24 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+article {
+    flex-grow: 1;
+}
+
+header, article, footer {
+    flex-shrink: 0;
+}
+
+form.card {
+    max-width: 600px;
+    margin: 0 auto;
+}
