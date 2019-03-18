@@ -1,0 +1,124 @@
+@using PocketChange.Models;
+
+@model Account
+@{
+    ViewData["Title"] = $"My Accounts - {Model.Type.ToString()}";
+}
+
+<div class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <p class="content">
+                <a href="@Url.Action("Index", "Home")" class="button is-text has-text-info">
+                    <i class="fa fa-angle-left"></i>
+                    &nbsp;
+                    Back
+                </a>
+            </p>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <h1 class="title">@Model.Type.ToString()</h1>
+                    </div>
+                    <div class="level-item">
+                        <h2 class="subtitle">
+                            @switch (Model.Type)
+                            {
+                                case AccountType.Checking:
+                                case AccountType.Savings:
+                                    <text>Account #</text>
+                                    break;
+                                case AccountType.Credit:
+                                    <text>Card #</text>
+                                    break;
+                            }
+                            @Model.Number
+                        </h2>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        @if (Model.Balance > 0)
+                        {
+                            <h1 class="title has-text-success">$@Model.Balance</h1>
+                        }
+                        else
+                        {
+                            <h1 class="title has-text-danger">$@Model.Balance</h1>
+                        }
+                    </div>
+                    <div class="level-item">
+                        <h2 class="subtitle">Available</h2>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="content">
+                <h5>Goals</h5>
+                <table class="table is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Period</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @if (Model.Goals.Count > 0)
+                    {
+                        foreach (var goal in Model.Goals)
+                        {
+                            <tr>
+                                <td></td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" class="has-text-centered">You don't have any goals. Create one <a>here</a>.</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+                <h5>History</h5>
+                <table class="table is-striped" data-table>
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>@Model.CreatedOn.ToShortDateString()</td>
+                        <td></td>
+                        <td>$@Model.StartingBalance</td>
+                        <td>Initial Deposit</td>
+                    </tr>
+                    @if (Model.Transactions.Count > 0)
+                    {
+                        foreach (var transaction in Model.Transactions)
+                        {
+                            <tr>
+                                <td>@transaction.ProcessingDate.ToShortDateString()</td>
+                                <td>@transaction.Type.ToString()</td>
+                                <td>$@transaction.Amount</td>
+                                <td>@transaction.Description</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="has-text-centered">No history yet. Your first transaction will appear here.</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
