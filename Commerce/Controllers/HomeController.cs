@@ -1,4 +1,3 @@
-
 using System.Web.Mvc;
 
 namespace Commerce.Controllers
@@ -21,6 +20,10 @@ namespace Commerce.Controllers
         }
         
         public ActionResult Goals()
+        {
+            return View();
+        }
+        public ActionResult AddGoal()
         {
             return View();
         }
