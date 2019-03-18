@@ -1,0 +1,68 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "My Accounts";
+}
+
+<div class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">My Accounts</h1>
+            <h2 class="subtitle">
+                Total balance: $@(Model.Accounts.Where(o => o.Type != AccountType.Credit).Sum(o => o.Balance))*
+                <br/>
+                <small class="is-size-7">*credit balance not included</small>
+            </h2>
+            <div class="columns is-multiline">
+                @foreach (var account in Model.Accounts.OrderBy(o => o.Type))
+                {
+                    <div class="column is-4-fullhd is-6-desktop is-12-touch">
+                        <a class="box" href="@Url.Action("Index", "Account", new { id = account.Id })">
+                            <div class="level">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <h1 class="title">@account.Type.ToString()</h1>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <h2 class="subtitle">@account.Number</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level has-text-weight-bold">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        Current balance
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    @if (account.Type == AccountType.Credit)
+                                    {
+                                        <div class="level-item has-text-warning">
+                                            $@account.Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount)
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        if (account.Balance > 0)
+                                        {
+                                            <div class="level-item has-text-success">
+                                                @Html.Raw($"${account.Balance}")
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="level-item has-text-danger">
+                                                @Html.Raw($"${account.Balance}")
+                                            </div>
+                                        }   
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
