@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace PocketChange.Models.Accounts
@@ -12,14 +13,10 @@ namespace PocketChange.Models.Accounts
     /// </summary>
     public class CreditAccount : IAccount
     {
-        public CreditAccount(string cardNumber, decimal creditLine, IEnumerable<Transaction> history, IEnumerable<Goal> goals, DateTime createdOn)
+        public CreditAccount(DataRow dr)
         {
-            Id = Guid.NewGuid();
-            Number = cardNumber;
-            CreditLine = creditLine;
-            History = history;
-            Goals = goals;
-            CreatedOn = createdOn;
+            Id = dr.Field<Guid>("Id");
+            Type = dr.Field<AccountType>("Type");
         }
         
         public Guid Id { get; }
@@ -28,8 +25,8 @@ namespace PocketChange.Models.Accounts
         public decimal CreditLine { get; }
         public decimal Balance => History.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount) -  
                                   History.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
-        public IEnumerable<Transaction> History { get; }
-        public IEnumerable<Goal> Goals { get; }
+        public ICollection<Transaction> History { get; }
+        public ICollection<Goal> Goals { get; }
         public DateTime CreatedOn { get; }
     }
 }

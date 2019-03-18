@@ -39,13 +39,6 @@ namespace PocketChange
                 options.LowercaseUrls = true;
             });
 
-            services.AddTransient<MsSqlConnector>(_ =>
-            {
-                var connector = new MsSqlConnector();
-                connector.Initialize(Configuration["ConnectionStrings:Default"]);
-                return connector;
-            });
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -33,8 +33,9 @@ namespace PocketChange.Models
         {
             get
             {
-                return StartingBalance + Transactions.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount)
-                       - Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
+                return StartingBalance + 
+                       Transactions.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount) - 
+                       Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
             }
         }
         public List<Transaction> Transactions { get; }

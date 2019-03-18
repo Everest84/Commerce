@@ -10,11 +10,6 @@ namespace PocketChange.Models.Accounts
     {
         public SavingsAccount() { }
 
-        public SavingsAccount(Guid id)
-        {
-            var account = DatabaseOperations.GetSavingsAccount(id);
-        }
-
         public SavingsAccount(DataRow dr)
         {
             Id = dr.Field<Guid>("Id");
@@ -29,8 +24,8 @@ namespace PocketChange.Models.Accounts
 
         public decimal AvailableBalance => History.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount) -
                                            History.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
-        public IEnumerable<Transaction> History { get; }
-        public IEnumerable<Goal> Goals { get; }
+        public ICollection<Transaction> History { get; }
+        public ICollection<Goal> Goals { get; }
         public DateTime CreatedOn { get; }
     }
 }

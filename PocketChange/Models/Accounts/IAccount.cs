@@ -9,8 +9,8 @@ namespace PocketChange.Models.Accounts
         Guid Id { get; }
         AccountType Type { get; }
         string Number { get; }
-        IEnumerable<Transaction> History { get; }
-        IEnumerable<Goal> Goals { get; }
+        ICollection<Transaction> History { get; }
+        ICollection<Goal> Goals { get; }
         DateTime CreatedOn { get; }
     }
 
