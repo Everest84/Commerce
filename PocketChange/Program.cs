@@ -20,16 +20,7 @@ namespace PocketChange
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-#if DEBUG
-            WebHost.CreateDefaultBuilder(args)
-                .UseKestrel(options =>
-                {
-                    options.Listen(IPAddress.Loopback, 5080);
-                })
-                .UseStartup<Startup>();
-#else
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-#endif
     }
 }
