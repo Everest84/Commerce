@@ -21,8 +21,8 @@ GO
 CREATE TABLE [dbo].[Goal](
 	[GoalId] [uniqueidentifier] NOT NULL,
 	[UserId] [uniqueidentifier] NOT NULL,
+	[AccountId] [uniqueidentifier] NOT NULL,
 	[GoalTypeId] [int] NOT NULL,
-	[AccountType] [int] NOT NULL,
 	[CreatedOn] [datetime] NOT NULL,
 	[Deadline] [datetime] NOT NULL,
  CONSTRAINT [PK_Goal] PRIMARY KEY CLUSTERED 
@@ -46,6 +46,13 @@ REFERENCES [dbo].[UserRegistration] ([UserId])
 GO
 
 ALTER TABLE [dbo].[Goal] CHECK CONSTRAINT [FK_Goal_UserId]
+GO
+
+ALTER TABLE [dbo].[Goal]  WITH CHECK ADD CONSTRAINT [FK_Goal_AccountId] FOREIGN KEY([AccountId])
+REFERENCES [dbo].[Account] ([AccountId])
+GO
+
+ALTER TABLE [dbo].[Goal] CHECK CONSTRAINT [FK_Goal_AccountId]
 GO
 
 ALTER TABLE [dbo].[Goal]  WITH CHECK ADD CONSTRAINT [FK_Goal_GoalTypeId] FOREIGN KEY([GoalTypeId])
