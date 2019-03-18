@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using PocketChange.Controllers;
+using PocketChange.Models.Accounts;
 
 namespace PocketChange.Models
 {
     public class Account
     {
-        /// <summary>
-        /// Initializes a new account
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="accountNumber"></param>
-        /// <param name="startingBalance"></param>
-        public Account(AccountType type, string accountNumber, decimal startingBalance, List<Transaction> transactions, DateTime createdOn)
+        public Account(AccountType type, string accountNumber, List<Transaction> transactions, DateTime createdOn, decimal startingBalance = 0)
         {
             Id = Guid.NewGuid();
             Type = type;
@@ -25,10 +20,6 @@ namespace PocketChange.Models
             CreatedOn = createdOn;
         }
 
-        /// <summary>
-        /// Initializes an existing account by it's ID from the database
-        /// </summary>
-        /// <param name="id"></param>
         public Account(Guid id)
         {
             //TODO: Retrieve the account from database
@@ -38,8 +29,14 @@ namespace PocketChange.Models
         public AccountType Type { get; }
         public string Number { get; }
         public decimal StartingBalance { get; }
-        public decimal Balance => StartingBalance + Transactions.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount)
-                                  - Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
+        public decimal Balance
+        {
+            get
+            {
+                return StartingBalance + Transactions.Where(o => o.Type == TransactionType.Deposit).Sum(o => o.Amount)
+                       - Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount);
+            }
+        }
         public List<Transaction> Transactions { get; }
         public List<Goal> Goals { get; }
         public DateTime CreatedOn { get; }

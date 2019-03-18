@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using PocketChange.Data;
 
 namespace PocketChange.Models
 {
     public class HomeViewModel
     {
-        public HomeViewModel(IEnumerable<Account> accounts)
+        public HomeViewModel()
         {
-            Accounts = accounts;
+            Accounts = MockDataStore.Accounts;
         }
         
         public IEnumerable<Account> Accounts { get; }

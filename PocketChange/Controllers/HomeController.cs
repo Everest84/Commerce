@@ -13,7 +13,8 @@ namespace PocketChange.Controllers
     {
         public IActionResult Index()
         {
-            return View(new HomeViewModel(MockDataStore.Accounts));
+            
+            return View(new HomeViewModel());
         }
 
         public IActionResult Privacy()

@@ -25,40 +25,37 @@
                                 </div>
                                 <div class="level-right">
                                     <div class="level-item">
-                                        <h2 class="subtitle">
-                                            @switch (account.Type)
-                                            {
-                                                case AccountType.Checking:
-                                                case AccountType.Savings:
-                                                    <text>Account #</text>
-                                                    break;
-                                                case AccountType.Credit:
-                                                    <text>Card #</text>
-                                                    break;
-                                            }
-                                            @account.Number
-                                        </h2>
+                                        <h2 class="subtitle">@account.Number</h2>
                                     </div>
                                 </div>
                             </div>
                             <div class="level has-text-weight-bold">
                                 <div class="level-left">
                                     <div class="level-item">
-                                        Available balance
+                                        Current balance
                                     </div>
                                 </div>
                                 <div class="level-right">
-                                    @if (account.Balance > 0)
+                                    @if (account.Type == AccountType.Credit)
                                     {
-                                        <div class="level-item has-text-success">
-                                            @Html.Raw($"${account.Balance}")
-                                        </div>                                    
+                                        <div class="level-item has-text-warning">
+                                            $@account.Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount)
+                                        </div>
                                     }
                                     else
                                     {
-                                        <div class="level-item has-text-danger">
-                                            @Html.Raw($"${account.Balance}")
-                                        </div>                                    
+                                        if (account.Balance > 0)
+                                        {
+                                            <div class="level-item has-text-success">
+                                                @Html.Raw($"${account.Balance}")
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="level-item has-text-danger">
+                                                @Html.Raw($"${account.Balance}")
+                                            </div>
+                                        }   
                                     }
                                 </div>
                             </div>

@@ -11,7 +11,7 @@ namespace PocketChange.Controllers
         // GET
         public IActionResult Index(Guid id)
         {
-            var account = MockDataStore.Accounts.Single(o => o.Id == accountId);
+            var account = MockDataStore.Accounts.Single(o => o.Id == id);
             return View(account);
         }
     }

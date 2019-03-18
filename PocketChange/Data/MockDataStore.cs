@@ -13,14 +13,13 @@ namespace PocketChange.Data
             {
                 new Account(AccountType.Checking, 
                     "211111110", 
-                    239.00m, 
                     new List<Transaction>
                     {
                         new Transaction(TransactionType.Withdrawal, 2.00m, new DateTime(2017, 2, 11), "Starbucks"),
                         new Transaction(TransactionType.Deposit, 800.00m, new DateTime(2017,4,11), "Payroll" )
-                    }, new DateTime(2017, 1, 11)),
-                new Account(AccountType.Credit, "3111 3450 2930 9203", 500.00m, new List<Transaction>(), new DateTime()),
-                new Account(AccountType.Savings, "3011111130", 872.00m, new List<Transaction>(), new DateTime())
+                    }, new DateTime(2017, 1, 11), 239.00m),
+                new Account(AccountType.Credit, "3111 3450 2930 9203", new List<Transaction>(), new DateTime(), 500.00m),
+                new Account(AccountType.Savings, "3011111130", new List<Transaction>(), new DateTime(), 872.00m)
             };
             user2Accounts = new List<Account>();
         }

@@ -1,5 +1,3 @@
-@using PocketChange.Models;
-
 @model Account
 @{
     ViewData["Title"] = $"My Accounts - {Model.Type.ToString()}";
@@ -38,23 +36,74 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        @if (Model.Balance > 0)
+                        @if (Model.Type != AccountType.Credit)
                         {
-                            <h1 class="title has-text-success">$@Model.Balance</h1>
+                            if (Model.Balance > 0)
+                            {
+                                <h1 class="title has-text-success">$@Model.Balance</h1>
+                            }
+                            else
+                            {
+                                <h1 class="title has-text-danger">$@Model.Balance</h1>
+                            }
                         }
                         else
                         {
-                            <h1 class="title has-text-danger">$@Model.Balance</h1>
+                            if (Model.Balance > 0)
+                            {
+                                <h1 class="title has-text-warning">
+                                    $@Model.Transactions.Where(o => o.Type == TransactionType.Withdrawal).Sum(o => o.Amount)
+                                </h1>
+                            }
+                            else
+                            {
+                                <h1 class="title has-text-danger">$@Model.Balance</h1>
+                            }
                         }
                     </div>
                     <div class="level-item">
-                        <h2 class="subtitle">Available</h2>
+                        <h2 class="subtitle">
+                            @if (Model.Type != AccountType.Credit)
+                            {
+                                <text>Available</text>
+                            }
+                            else
+                            {
+                                <text>Balance</text>
+                            }
+                        </h2>
                     </div>
                 </div>
             </div>
+            @if (Model.Type == AccountType.Credit)
+            {
+                <div class="level">
+                    <div class="level-left"></div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <p>
+                                Credit line: <strong>$@Model.Balance</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
             <hr/>
             <div class="content">
-                <h5>Goals</h5>
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h4>Goals</h4>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <button type="button" class="button is-info is-outlined is-small" data-open="modal" data-target="#new-goal-modal">
+                                New Goal
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <table class="table is-fullwidth">
                     <thead>
                     <tr>
@@ -76,12 +125,14 @@
                     else
                     {
                         <tr>
-                            <td colspan="3" class="has-text-centered">You don't have any goals. Create one <a>here</a>.</td>
+                            <td colspan="3" class="has-text-centered">
+                                You don't have any goals. Create one <a data-open="modal" data-target="#new-goal-modal">here</a>.
+                            </td>
                         </tr>
                     }
                     </tbody>
                 </table>
-                <h5>History</h5>
+                <h4>History</h4>
                 <table class="table is-striped" data-table>
                     <thead>
                     <tr>
@@ -92,12 +143,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>@Model.CreatedOn.ToShortDateString()</td>
-                        <td></td>
-                        <td>$@Model.StartingBalance</td>
-                        <td>Initial Deposit</td>
-                    </tr>
+                    @if (Model.Type != AccountType.Credit)
+                    {
+                        <tr>
+                            <td>@Model.CreatedOn.ToShortDateString()</td>
+                            <td></td>
+                            <td>$@Model.StartingBalance</td>
+                            <td>Initial Deposit</td>
+                        </tr>
+                    }
                     @if (Model.Transactions.Count > 0)
                     {
                         foreach (var transaction in Model.Transactions)
@@ -118,6 +172,72 @@
                     }
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="new-goal-modal" class="modal">
+    <div class="modal-background" data-close="modal" data-target="#new-goal-modal"></div>
+    <div class="modal-content">
+        <div class="modal-card">
+            <div class="modal-card-head">
+                <h1 class="modal-card-title">New Goal</h1>
+            </div>
+            <div class="modal-card-body">
+                <form>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <input type="text" class="input" />
+                    </div>
+                    <div class="field">
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <div class="select">
+                                        <select>
+                                            <option>Save at least</option>
+                                            <option>Spend less than</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="level-item">
+                                <input type="number" class="input" placeholder="Enter a dollar amount" />
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <div class="select">
+                                        <select>
+                                            <option>Every week</option>
+                                            <option>Every month</option>
+                                            <option>Every year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="radio">Notifications</label>
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="notifications" checked="checked">
+                                Yes
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="notifications">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-card-foot">
+                <div class="buttons">
+                    <button type="submit" class="button is-info" data-close="modal" data-target="#new-goal-modal">Create</button>
+                    <button type="reset" class="button" data-close="modal" data-target="#new-goal-modal">Cancel</button>
+                </div>
             </div>
         </div>
     </div>

@@ -21,9 +21,27 @@
         });
     });
     
-    document.querySelectorAll('[data-table]').forEach(function(el) {
-        var dataTable = new DataTable(el);
-    });
+    if (typeof DataTable === "function") {
+        document.querySelectorAll('[data-table]').forEach(function(el) {
+            var dataTable = new DataTable(el);
+        });
+    }
+    
+    document.querySelectorAll('[data-open="modal"]').forEach(openModal);
+    document.querySelectorAll('[data-close="modal"]').forEach(closeModal);
+    
+    function openModal(el) {
+        var target = document.querySelector(el.dataset.target);
+        el.addEventListener('click', function() {
+            target.classList.add('is-active');
+        });
+    }
+    function closeModal(el) {
+        var target = document.querySelector(el.dataset.target);
+        el.addEventListener('click', function() {
+            target.classList.remove('is-active');
+        });
+    }
 }
 
 });
