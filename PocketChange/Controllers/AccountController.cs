@@ -9,10 +9,10 @@ namespace PocketChange.Controllers
     public class AccountController : Controller
     {
         // GET
-        public IActionResult Index(Guid id)
+        public IActionResult Index(Guid accountId)
         {
-            var account = MockDataStore.Accounts.Single(o => o.Id == id);
-            return View(account);
+            var model = new AccountViewModel(accountId);
+            return View(model);
         }
     }
 }

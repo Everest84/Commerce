@@ -13,8 +13,8 @@ namespace PocketChange.Controllers
     {
         public IActionResult Index()
         {
-            
-            return View(new HomeViewModel());
+            var model = new HomeViewModel();
+            return View(model);
         }
 
         public IActionResult Privacy()
