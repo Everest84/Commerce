@@ -6,12 +6,8 @@
 <div class="hero is-small">
     <div class="hero-body">
         <div class="container">
-            <h1 class="title">My Accounts</h1>
-            <h2 class="subtitle">
-                Total balance: $@(Model.Accounts.Where(o => o.Type != AccountType.Credit).Sum(o => o.Balance))*
-                <br/>
-                <small class="is-size-7">*credit balance not included</small>
-            </h2>
+            <h1 class="title">My accounts</h1>
+            <h2 class="subtitle">Available balance: $@(Model.Accounts.Where(o => o.Type != AccountType.Credit).Sum(o => o.Balance))</h2>
             <div class="columns is-multiline">
                 @foreach (var account in Model.Accounts.OrderBy(o => o.Type))
                 {
@@ -66,3 +62,13 @@
         </div>
     </div>
 </div>
+<div class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Track your spending</h1>
+            <canvas id="myChart" width="100" height="40"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="js/dashboard.js"></script>

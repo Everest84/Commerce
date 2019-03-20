@@ -15,8 +15,9 @@ namespace PocketChange.Data
                     "211111110", 
                     new List<Transaction>
                     {
-                        new Transaction(TransactionType.Withdrawal, 2.00m, new DateTime(2017, 2, 11), "Starbucks"),
-                        new Transaction(TransactionType.Deposit, 800.00m, new DateTime(2017,4,11), "Payroll" )
+                        new Transaction(TransactionType.Withdrawal, 2.00m, new DateTime(2017, 11, 2), "Starbucks"),
+                        new Transaction(TransactionType.Deposit, 800.00m, new DateTime(2017,11,4), "Payroll" ),
+                        new Transaction(TransactionType.Withdrawal, 8.00m, new DateTime(2017, 11, 7), "Chipotle")
                     }, new DateTime(2017, 1, 11), 239.00m),
                 new Account(AccountType.Credit, "3111 3450 2930 9203", new List<Transaction>(), new DateTime(), 500.00m),
                 new Account(AccountType.Savings, "3011111130", new List<Transaction>(), new DateTime(), 872.00m)
