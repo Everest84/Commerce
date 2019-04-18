@@ -30,7 +30,7 @@
 
 }
 
-.SideMenu {
+.Sidebar {
   display: flex;
   flex-direction: column;
   min-width: 250px;
@@ -38,11 +38,11 @@
   height: 100vh;
 }
 
-.SideMenu-nav {
+.Sidebar-nav {
 
 }
 
-.SideMenu-content {
+.Sidebar-content {
   flex-grow: 1;
   box-shadow: 2px 0 0 0 whitesmoke;
   margin-right: 2px;
@@ -69,16 +69,16 @@
     flex-direction: column;
   }
 
-  .SideMenu {
+  .Sidebar {
     height: auto;
   }
-  .SideMenu-content {
+  .Sidebar-content {
     display: none;
     flex-shrink: 1;
     flex-grow: 0;
     box-shadow: 0 2px 0 0 whitesmoke;
   }
-  .SideMenu-content.is-active {
+  .Sidebar-content.is-active {
     display: block;
   }
 }
