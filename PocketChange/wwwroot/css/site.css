@@ -1,56 +1,84 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿.App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
+.App-menu {
+  flex-shrink: 1;
+  width: 100%;
 }
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: inherit;
+}
+
+.App-content-head {
+
+}
+
+.App-content-body {
+  flex-grow: 1;
+}
+
+.App-content-foot {
+
+}
+
+.SideMenu {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  width: 100%;
+  height: 100vh;
+}
+
+.SideMenu-nav {
+
+}
+
+.SideMenu-content {
+  flex-grow: 1;
+  box-shadow: 2px 0 0 0 whitesmoke;
+  margin-right: 2px;
+  padding: 10px;
+}
+
+.navbar-brand-spanner {
+  display: flex;
+  flex-grow: 1;
+}
+
+.is-family-serif {
+  font-family: serif;
+}
+
+@media screen and (min-width: 1088px) {
+  .App-menu {
+    min-height: 100vh;
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+@media screen and (max-width: 1087px) {
+  .App {
+    flex-direction: column;
+  }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  .SideMenu {
+    height: auto;
+  }
+  .SideMenu-content {
+    display: none;
+    flex-shrink: 1;
+    flex-grow: 0;
+    box-shadow: 0 2px 0 0 whitesmoke;
+  }
+  .SideMenu-content.is-active {
+    display: block;
+  }
 }
