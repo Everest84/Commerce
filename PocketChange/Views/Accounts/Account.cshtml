@@ -1,0 +1,46 @@
+﻿@model Account
+@{
+    ViewData["Title"] = $"{Model.Type.ToString()} Account";
+}
+
+<section class="section">
+    <a asp-controller="Accounts" asp-action="Index" class="button is-info">Back to Accounts</a>
+    <hr/>
+    <div class="columns content">
+        <div class="column is-narrow has-background-light">
+            <h3 class="title">@Model.Type.ToString() Account</h3>
+            <h4 class="subtitle">Acct. # @Model.Number</h4>
+            <h3 class="has-text-success">$@Model.GetBalance()</h3>
+        </div>
+        <div class="column">
+            <table class="table is-hoverable is-fullwidth">
+                <thead>
+                <tr>
+                    <th class="has-text-centered">Amount</th>
+                    <th class="has-text-centered">Description</th>
+                    <th class="has-text-centered">Processing Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var transaction in Model.Transactions)
+                {
+                    <tr>
+                        <td class="has-text-centered">
+                            @if (transaction.Type == TransactionType.Withdrawal)
+                            {
+                                <span class="has-text-danger">-@transaction.Amount</span>
+                            }
+                            else
+                            {
+                                <span class="has-text-success">+@transaction.Amount</span>
+                            }
+                        </td>
+                        <td class="has-text-centered">@transaction.Description</td>
+                        <td class="has-text-centered">@transaction.ProcessingDate.ToShortDateString() @transaction.ProcessingDate.ToShortTimeString()</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

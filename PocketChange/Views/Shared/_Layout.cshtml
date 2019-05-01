@@ -14,84 +14,27 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous" integrity="sha256-8B1OaG0zT7uYA572S2xOxWACq9NXYPQ+U5kHPV1bJN4=" />
     </environment>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-<aside className="Sidebar">
-                <div className="Sidebar-nav">
-                    <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
-                        <div className="navbar-brand">
-                            <a className="navbar-item">
-                                <img src="img/logo.png" />&nbsp;
-                                <span>PocketChange</span>
-                            </a>
-                            <div className="navbar-brand-spanner"></div>
-                            <div className="navbar-item is-hidden-desktop">
-                                <div className="dropdown is-right is-hoverable">
-                                    <div className="dropdown-trigger">
-                                        <span className="icon is-medium">
-                                            <i className="fa fa-lg fa-user-circle" />
-                                        </span>
-                                    </div>
-                                    <div className="dropdown-menu" role="menu">
-                                        <div className="dropdown-content">
-                                            <a className="dropdown-item">
-                                                Sign Out
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a id="sidebarToggle" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="sidebarMenu">
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-                <div id="sidebarMenu" className="Sidebar-content">
-                    <div className="menu">
-                        <ul className="menu-list">
-                            <li><a to="/">Home</a>
-                            <li><a to="/accounts">Accounts</a>
-                            <li>
-                                <ul className="menu-list">
-                                    <li><a>Savings <small>(x6271)</small></a></li>
-                                    <li><a>Checking <small>(x1211)</small></a></li>
-                                    <li><a>Credit Card <small>(x7948)</small></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-<article>
-    <header>
-        
-    </header>
-    <main>
-        
-    </main>
-    <footer>
-        
-    </footer>
-</article>
     <div class="App">
-        <div class="App-menu">
-            
+        <div class="App-nav">
+            @Html.Partial("_Sidebar", new SidebarViewModel())
         </div>
         <div class="App-content">
             <div class="App-content-head">
-                <header className="is-hidden-touch">
-                    <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
-                        <div className="navbar-end">
-                            <div className="navbar-item has-dropdown is-hoverable">
-                                <div className="navbar-link">
-                                    bankuser1
+                <header class="is-hidden-touch">
+                    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+                        <div class="navbar-end">
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <div class="navbar-link">
+                                    <span class="icon">
+                                        <i class="fa fa-lg fa-user-circle"></i>
+                                    </span>
                                 </div>
-                                <div className="navbar-dropdown is-boxed is-right">
-                                    <a className="navbar-item">
+                                <div class="navbar-dropdown is-boxed is-right">
+                                    <a class="navbar-item">
                                         Sign Out
                                     </a>
                                 </div>

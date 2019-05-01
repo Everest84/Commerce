@@ -1,0 +1,87 @@
+@using Microsoft.AspNetCore.Html
+@model SidebarViewModel
+
+@functions
+{
+    public class Link
+    {
+        public Link(string name, string controller, string action, string routeId = null)
+        {
+            Name = name;
+            Controller = controller;
+            Action = action;
+            RouteId = routeId;
+        }
+                    
+        public string Name { get; }
+        public string Controller { get; }
+        public string Action { get; }
+        public string RouteId { get; }
+    }
+}
+@{
+    Func<Link, IHtmlContent> displayItem = 
+        @<a asp-controller="@item.Controller" asp-action="@item.Action" asp-route-id="@item.RouteId" class="@await Task.Run( () =>
+                        {
+                            var currentController = "";
+                            var currentAction = "";
+                            if (ViewContext.RouteData.Values["controller"] != null)
+                            {
+                                currentController = ViewContext.RouteData.Values["controller"].ToString();
+                            }
+                            if (ViewContext.RouteData.Values["action"] != null)
+                            {
+                                currentAction = ViewContext.RouteData.Values["action"].ToString();
+                            }
+
+                            if (string.IsNullOrEmpty(item.RouteId))
+                            {
+                                if (item.Controller == currentController && item.Action == currentAction)
+                                {
+                                    return "is-active";
+                                }
+                                else
+                                {
+                                    return "";
+                                }
+                            }
+
+                            return "";
+
+                        })">
+            @item.Name
+        </a>;
+}
+
+<nav class="navbar is-primary">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+            <img src="img/logo.png" alt="PocketChange" />
+            <strong class="has-text-white">PocketChange</strong>
+        </div>
+    </div>
+</nav>
+<aside class="menu section">
+    <p class="menu-label">General</p>
+    <ul class="menu-list">
+        <li>@displayItem(new Link("Home", "Home", "Index"))</li>
+    </ul>
+    <p class="menu-label">Profile</p>
+    <ul class="menu-list">
+        <li>
+            @displayItem(new Link("Accounts", "Accounts", "Index"))
+            <ul class="menu-list">
+                @foreach (var account in Model.Accounts)
+                {
+                    <li>@displayItem(new Link(account.Type.ToString(), "Accounts", "Account", account.Number))</li>
+                }     
+            </ul>
+        </li>
+        <li>@displayItem(new Link("Goals", "Goals", "Index"))</li>
+    </ul>
+    <hr/>
+    <ul class="menu-list">
+        <li><a>Settings</a></li>
+        <li><a>Sign Out</a></li>
+    </ul>
+</aside>

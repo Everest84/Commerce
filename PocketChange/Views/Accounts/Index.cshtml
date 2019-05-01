@@ -1,0 +1,14 @@
+﻿@model AccountsViewModel
+@{
+    ViewData["Title"] = "My Accounts";
+}
+
+<section class="section">
+    @foreach (var account in Model.Accounts)
+    {
+        <a asp-controller="Accounts" asp-action="Account" asp-route-id=@account.Number class="box">
+            <h1 class="title">@account.Type.ToString()</h1>
+            <h2 class="subtitle">Acct. # @account.Number</h2>
+        </a>
+    }
+</section>
