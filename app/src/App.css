@@ -1,0 +1,30 @@
+.App {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.App-navigation {
+    flex-shrink: 1;
+    min-width: 300px;
+    height: inherit;
+    box-shadow: 2px 0 0 0 whitesmoke;
+}
+
+.App-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.App-content-header {
+    flex-shrink: 1;
+}
+
+.App-content-main {
+    flex-grow: 1;
+}
+
+.App-content-footer {
+    flex-shrink: 1;
+}
