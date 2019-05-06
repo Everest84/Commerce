@@ -16,3 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.content.content-inverse * {
+    font-weight: 100;
+}
+
+.pad {
+    padding: 1rem;
+}

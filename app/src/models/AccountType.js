@@ -8,10 +8,10 @@ export default class AccountType {
         this.value = value;
         switch(value) {
             case 0:
-                this.name = "Savings";
+                this.name = "Checking";
                 break;
             case 1:
-                this.name = "Checking";
+                this.name = "Savings";
                 break;
             case 2:
                 this.name = "Credit Card";

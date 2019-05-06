@@ -31,7 +31,7 @@ export default class AppContent extends Component {
             return (
                 <div className="App-content">
                     <header className="App-content-header">
-                        <nav className="navbar is-info" />
+                        <nav className="navbar is-info is-fixed-top" />
                     </header>
                     <main className="App-content-main">
                         <Route exact path="/" render={(props) => <Dashboard {...props} profile={profile} />} />
