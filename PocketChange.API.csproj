@@ -7,9 +7,20 @@
 
   <ItemGroup>
     <Compile Remove="app\**" />
+    <Compile Remove="Documentation\**" />
     <Content Remove="app\**" />
+    <Content Remove="Documentation\**" />
     <EmbeddedResource Remove="app\**" />
+    <EmbeddedResource Remove="Documentation\**" />
     <None Remove="app\**" />
+    <None Remove="Documentation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+    <None Remove="LICENSE" />
+    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>

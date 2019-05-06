@@ -1,0 +1,1150 @@
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 239.00;
+DECLARE @description VARCHAR(MAX) = 'Account opening';
+DECLARE @processingDate DateTime = '20171101 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 2.00;
+DECLARE @description VARCHAR(MAX) = 'Starbucks';
+DECLARE @processingDate DateTime = '20171102 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 800.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171104 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 8.00;
+DECLARE @description VARCHAR(MAX) = 'Chipotle';
+DECLARE @processingDate DateTime = '20171107 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 10.00;
+DECLARE @description VARCHAR(MAX) = 'ATM';
+DECLARE @processingDate DateTime = '20171109 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 32.00;
+DECLARE @description VARCHAR(MAX) = 'Hoolihans';
+DECLARE @processingDate DateTime = '20171110 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 100.00;
+DECLARE @description VARCHAR(MAX) = 'KCPL';
+DECLARE @processingDate DateTime = '20171110 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 190.00;
+DECLARE @description VARCHAR(MAX) = 'Google Fiber';
+DECLARE @processingDate DateTime = '20171110 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.99;
+DECLARE @description VARCHAR(MAX) = 'Netflix';
+DECLARE @processingDate DateTime = '20171115 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 350.00;
+DECLARE @description VARCHAR(MAX) = 'Rent';
+DECLARE @processingDate DateTime = '20171115 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 2.00;
+DECLARE @description VARCHAR(MAX) = 'Starbucks';
+DECLARE @processingDate DateTime = '20171117 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 750.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 620.00;
+DECLARE @description VARCHAR(MAX) = 'Commerce Bank Credit Card payment';
+DECLARE @processingDate DateTime = '20171118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 150.00;
+DECLARE @description VARCHAR(MAX) = 'McFaddens';
+DECLARE @processingDate DateTime = '20171119 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 100.00;
+DECLARE @description VARCHAR(MAX) = 'Price Chopper';
+DECLARE @processingDate DateTime = '20171122 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 50.00;
+DECLARE @description VARCHAR(MAX) = 'Check from friend';
+DECLARE @processingDate DateTime = '20171123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 800.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171202 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.00;
+DECLARE @description VARCHAR(MAX) = 'Hyvee';
+DECLARE @processingDate DateTime = '20171202 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 14.00;
+DECLARE @description VARCHAR(MAX) = 'McFaddens';
+DECLARE @processingDate DateTime = '20171212 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 32.00;
+DECLARE @description VARCHAR(MAX) = 'Target';
+DECLARE @processingDate DateTime = '20171213 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 100.00;
+DECLARE @description VARCHAR(MAX) = 'KCPL';
+DECLARE @processingDate DateTime = '20171213 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 750.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171217 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 190.00;
+DECLARE @description VARCHAR(MAX) = 'Google Fiber';
+DECLARE @processingDate DateTime = '20171218 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.99;
+DECLARE @description VARCHAR(MAX) = 'Netflix';
+DECLARE @processingDate DateTime = '20171218 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 350.00;
+DECLARE @description VARCHAR(MAX) = 'Rent';
+DECLARE @processingDate DateTime = '20171218 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 6.50;
+DECLARE @description VARCHAR(MAX) = 'Neo's';
+DECLARE @processingDate DateTime = '20171222 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 230.00;
+DECLARE @description VARCHAR(MAX) = 'Commerce Bank Credit Card payment';
+DECLARE @processingDate DateTime = '20171222 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 100.00;
+DECLARE @description VARCHAR(MAX) = 'Best Buy';
+DECLARE @processingDate DateTime = '20171222 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 300.00;
+DECLARE @description VARCHAR(MAX) = 'Pottery Barn';
+DECLARE @processingDate DateTime = '20171222 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 23.00;
+DECLARE @description VARCHAR(MAX) = 'The Loft';
+DECLARE @processingDate DateTime = '20171226 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 45.00;
+DECLARE @description VARCHAR(MAX) = 'Dave and Busters';
+DECLARE @processingDate DateTime = '20171226 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 35.00;
+DECLARE @description VARCHAR(MAX) = 'Bowling';
+DECLARE @processingDate DateTime = '20171226 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 800.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171230 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 210.00;
+DECLARE @description VARCHAR(MAX) = 'McFaddens';
+DECLARE @processingDate DateTime = '20171231 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 18.00;
+DECLARE @description VARCHAR(MAX) = 'Taco Bell';
+DECLARE @processingDate DateTime = '20171231 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 45.00;
+DECLARE @description VARCHAR(MAX) = 'QuikTrip';
+DECLARE @processingDate DateTime = '20171231 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 130.00;
+DECLARE @description VARCHAR(MAX) = 'KCPL';
+DECLARE @processingDate DateTime = '20180102 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 185.00;
+DECLARE @description VARCHAR(MAX) = 'Google Fiber';
+DECLARE @processingDate DateTime = '20180102 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 7.99;
+DECLARE @description VARCHAR(MAX) = 'Netflix';
+DECLARE @processingDate DateTime = '20180104 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 56.00;
+DECLARE @description VARCHAR(MAX) = 'Price Chopper';
+DECLARE @processingDate DateTime = '20180104 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 43.00;
+DECLARE @description VARCHAR(MAX) = 'Price Chopper';
+DECLARE @processingDate DateTime = '20180106 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 98.00;
+DECLARE @description VARCHAR(MAX) = 'Target';
+DECLARE @processingDate DateTime = '20180107 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 13.00;
+DECLARE @description VARCHAR(MAX) = 'Jose Peppers';
+DECLARE @processingDate DateTime = '20180109 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.00;
+DECLARE @description VARCHAR(MAX) = 'Starbucks';
+DECLARE @processingDate DateTime = '20180110 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 350.00;
+DECLARE @description VARCHAR(MAX) = 'Rent';
+DECLARE @processingDate DateTime = '20180112 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 3.50;
+DECLARE @description VARCHAR(MAX) = 'Redbox';
+DECLARE @processingDate DateTime = '20180112 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 301.00;
+DECLARE @description VARCHAR(MAX) = 'Bank of America Credit Card payment';
+DECLARE @processingDate DateTime = '20180112 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 730.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20180113 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 232.68;
+DECLARE @description VARCHAR(MAX) = 'Target';
+DECLARE @processingDate DateTime = '20180114 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 18.50;
+DECLARE @description VARCHAR(MAX) = 'Best Buy';
+DECLARE @processingDate DateTime = '20180114 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 120.00;
+DECLARE @description VARCHAR(MAX) = 'Nationwide';
+DECLARE @processingDate DateTime = '20180116 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 50.00;
+DECLARE @description VARCHAR(MAX) = 'KC Police - Speeding Ticket';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 50.00;
+DECLARE @description VARCHAR(MAX) = 'Uber';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.20;
+DECLARE @description VARCHAR(MAX) = 'Manny's';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 24.75;
+DECLARE @description VARCHAR(MAX) = 'Toys R Us';
+DECLARE @processingDate DateTime = '20180119 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 3.50;
+DECLARE @description VARCHAR(MAX) = 'Scooters';
+DECLARE @processingDate DateTime = '20180119 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 36.00;
+DECLARE @description VARCHAR(MAX) = 'QuikTrip';
+DECLARE @processingDate DateTime = '20180120 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 32.00;
+DECLARE @description VARCHAR(MAX) = 'Price Chopper';
+DECLARE @processingDate DateTime = '20180120 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 48.12;
+DECLARE @description VARCHAR(MAX) = 'Home Depot';
+DECLARE @processingDate DateTime = '20180121 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 4.20;
+DECLARE @description VARCHAR(MAX) = 'Burger King';
+DECLARE @processingDate DateTime = '20180122 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 45.00;
+DECLARE @description VARCHAR(MAX) = 'Jiffy Lube';
+DECLARE @processingDate DateTime = '20180122 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 25.00;
+DECLARE @description VARCHAR(MAX) = 'Doctor visit';
+DECLARE @processingDate DateTime = '20180122 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 36.00;
+DECLARE @description VARCHAR(MAX) = 'CVS';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 29.00;
+DECLARE @description VARCHAR(MAX) = 'Price Chopper';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 200.00;
+DECLARE @description VARCHAR(MAX) = 'Transfer to Savings';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 150.00;
+DECLARE @description VARCHAR(MAX) = 'Christmas Check from Grandma';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 250.00;
+DECLARE @description VARCHAR(MAX) = 'Student loans';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 75.00;
+DECLARE @description VARCHAR(MAX) = 'Ford Service';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 36.00;
+DECLARE @description VARCHAR(MAX) = 'Hallmark';
+DECLARE @processingDate DateTime = '20180127 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 22.00;
+DECLARE @description VARCHAR(MAX) = 'CVS';
+DECLARE @processingDate DateTime = '20180127 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 810.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20180127 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 180.00;
+DECLARE @description VARCHAR(MAX) = 'Pottery Barn';
+DECLARE @processingDate DateTime = '20180130 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 46.00;
+DECLARE @description VARCHAR(MAX) = 'Cheesecake Factory';
+DECLARE @processingDate DateTime = '20180130 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = '43720334-5D0A-426C-9BB4-CD97B3A13201';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 8.00;
+DECLARE @description VARCHAR(MAX) = 'Starbucks';
+DECLARE @processingDate DateTime = '20180130 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = ;
+DECLARE @description VARCHAR(MAX) = '';
+DECLARE @processingDate DateTime = ' 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 500.00;
+DECLARE @description VARCHAR(MAX) = 'Account opening';
+DECLARE @processingDate DateTime = '20171101 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 4.60;
+DECLARE @description VARCHAR(MAX) = 'McDonalds';
+DECLARE @processingDate DateTime = '20171130 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 23.45;
+DECLARE @description VARCHAR(MAX) = 'Target';
+DECLARE @processingDate DateTime = '20171202 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 40.00;
+DECLARE @description VARCHAR(MAX) = 'Michaels';
+DECLARE @processingDate DateTime = '20171202 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 6.70;
+DECLARE @description VARCHAR(MAX) = 'Hyvee';
+DECLARE @processingDate DateTime = '20171206 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 8.90;
+DECLARE @description VARCHAR(MAX) = 'Panda Express';
+DECLARE @processingDate DateTime = '20171206 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 12.30;
+DECLARE @description VARCHAR(MAX) = 'Chipotle';
+DECLARE @processingDate DateTime = '20171215 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) =  ;
+DECLARE @description VARCHAR(MAX) = 'Account opening';
+DECLARE @processingDate DateTime = '20171217 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 6.50;
+DECLARE @description VARCHAR(MAX) = 'Bolings';
+DECLARE @processingDate DateTime = '20171217 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 5.40;
+DECLARE @description VARCHAR(MAX) = 'Taco Bell';
+DECLARE @processingDate DateTime = '20171228 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 23.00;
+DECLARE @description VARCHAR(MAX) = 'Margaritas';
+DECLARE @processingDate DateTime = '20171228 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 10.00;
+DECLARE @description VARCHAR(MAX) = 'Hoolihans';
+DECLARE @processingDate DateTime = '20171229 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 12.35;
+DECLARE @description VARCHAR(MAX) = 'Gordon Biersch';
+DECLARE @processingDate DateTime = '20171229 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 11.34;
+DECLARE @description VARCHAR(MAX) = 'Forever 21';
+DECLARE @processingDate DateTime = '20180105 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 16.34;
+DECLARE @description VARCHAR(MAX) = 'Lids';
+DECLARE @processingDate DateTime = '20180105 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 8.93;
+DECLARE @description VARCHAR(MAX) = 'Starbucks';
+DECLARE @processingDate DateTime = '20180105 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 7.45;
+DECLARE @description VARCHAR(MAX) = 'Dairy Queen';
+DECLARE @processingDate DateTime = '20180105 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.12;
+DECLARE @description VARCHAR(MAX) = 'Mini Golf';
+DECLARE @processingDate DateTime = '20180106 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 16.45;
+DECLARE @description VARCHAR(MAX) = 'Home Depot';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 17.09;
+DECLARE @description VARCHAR(MAX) = 'Walmart ';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 10.00;
+DECLARE @description VARCHAR(MAX) = 'Quick Trip';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 34.00;
+DECLARE @description VARCHAR(MAX) = 'Quick Trip';
+DECLARE @processingDate DateTime = '20180118 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 12.43;
+DECLARE @description VARCHAR(MAX) = 'Wings Café';
+DECLARE @processingDate DateTime = '20180119 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 9.00;
+DECLARE @description VARCHAR(MAX) = 'Chipotle';
+DECLARE @processingDate DateTime = '20180120 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 43.78;
+DECLARE @description VARCHAR(MAX) = 'Bristol';
+DECLARE @processingDate DateTime = '20180123 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 67.00;
+DECLARE @description VARCHAR(MAX) = 'Tanners';
+DECLARE @processingDate DateTime = '20180124 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 12.45;
+DECLARE @description VARCHAR(MAX) = 'Kwik Shop';
+DECLARE @processingDate DateTime = '20180124 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 8.00;
+DECLARE @description VARCHAR(MAX) = 'Burger King';
+DECLARE @processingDate DateTime = '20180115 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) =  ;
+DECLARE @description VARCHAR(MAX) = 'Account opening';
+DECLARE @processingDate DateTime = '20180126 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 4.56;
+DECLARE @description VARCHAR(MAX) = 'Quick Trip';
+DECLARE @processingDate DateTime = '20180127 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = ;
+DECLARE @description VARCHAR(MAX) = '';
+DECLARE @processingDate DateTime = ' 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 872.00;
+DECLARE @description VARCHAR(MAX) = 'Account opening';
+DECLARE @processingDate DateTime = '20171101 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 100.00;
+DECLARE @description VARCHAR(MAX) = 'Refund check ';
+DECLARE @processingDate DateTime = '20171107 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 150.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20181108 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 0.02;
+DECLARE @description VARCHAR(MAX) = 'Interest';
+DECLARE @processingDate DateTime = '20171130 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 150.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20171217 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = 492.00;
+DECLARE @description VARCHAR(MAX) = 'Property taxes';
+DECLARE @processingDate DateTime = '20181218 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 0.04;
+DECLARE @description VARCHAR(MAX) = 'Interest';
+DECLARE @processingDate DateTime = '20171231 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 0;
+DECLARE @amount DECIMAL(19,4) = 150.00;
+DECLARE @description VARCHAR(MAX) = 'Payroll';
+DECLARE @processingDate DateTime = '20180113 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+
+DECLARE @accountId UNIQUEIDENTIFIER = 'CDCD00DB-9BB0-42C8-9412-5E058C6EE89F';
+DECLARE @transactionType INT = 1;
+DECLARE @amount DECIMAL(19,4) = ;
+DECLARE @description VARCHAR(MAX) = '';
+DECLARE @processingDate DateTime = ' 12:00:00 AM';
+INSERT INTO [dbo].[Transaction]
+VALUES (NEWID(), @accountId, @transactionType, @amount, @description, @processingDate);
+
+GO
+

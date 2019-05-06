@@ -1,3 +1,7 @@
+html {
+    overflow: unset !important;
+}
+
 body {
   margin: 0;
   padding: 0;
