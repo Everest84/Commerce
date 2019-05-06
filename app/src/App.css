@@ -46,6 +46,7 @@
 
 .App-content-main {
     flex-grow: 1;
+    padding-top: 52px;
 }
 
 .App-content-footer {
