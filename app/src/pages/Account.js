@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import AccountType from '../models/AccountType';
 
+const $ = require('jquery');
+$.DataTable = require('datatables.net');
+
 export default class Account extends Component {
+    componentDidMount() {
+        $('#transactions-table').DataTable();
+    }
+
     render() {
         const profile = this.props.profile;
 
@@ -24,16 +31,16 @@ export default class Account extends Component {
                         else
                             accountBalance -= amountValue;
                         let amount = transaction.amount.toString();
-                        if (!amount.indexOf('.') > -1)
+                        if (amount.indexOf('.') === -1)
                             amount += '.00';
                         const description = transaction.description;
                         const processingDate = new Date(transaction.processingDate);
 
                         tableHtml.push(
                             <tr>
-                                <td>{processingDate.getDate()}</td>
+                                <td>{processingDate.toDateString()}</td>
                                 <td>{transactionType}</td>
-                                <td>{amount}</td>
+                                <td>${amount}</td>
                                 <td>{description}</td>
                             </tr>
                         )
@@ -46,7 +53,7 @@ export default class Account extends Component {
                         </div>
                         <div className="card-content">
                             <strong>Transactions</strong>
-                            <table className="table is-striped is-hoverable is-fullwidth">
+                            <table id="transactions-table" className="table is-striped is-hoverable is-fullwidth">
                                 <thead>
                                 <tr>
                                     <th>Processing Date</th>

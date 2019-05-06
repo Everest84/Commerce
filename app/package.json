@@ -5,6 +5,8 @@
   "dependencies": {
     "bulma": "^0.7.4",
     "chart.js": "^1.1.1",
+    "datatables.net": "^1.10.19",
+    "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.8.6",
